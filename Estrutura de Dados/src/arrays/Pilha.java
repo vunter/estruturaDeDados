@@ -21,12 +21,13 @@ public class Pilha {
 		if (this.pilhaVazia()) {
 			return 0;
 		}
-		return ++this.posicaoPilha;
+		return this.posicaoPilha + 1;
 	}
 
 	public void empilhar(Object valor) {
 		if (this.posicaoPilha < this.pilha.length - 1) {
 			this.pilha[++posicaoPilha] = valor;
+			
 		}
 	}
 
