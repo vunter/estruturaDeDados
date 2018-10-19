@@ -28,7 +28,6 @@ import java.awt.event.ActionEvent;
 public class TelaPilha extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtInsiraValor;
 
 	/**
 	 * Launch the application.
@@ -64,10 +63,6 @@ public class TelaPilha extends JFrame {
 		JLabel lblPilhaIniciada = new JLabel("Pilha Iniciada!");
 
 		lblPilhaIniciada.setFont(new Font("Times New Roman", Font.PLAIN, 41));
-
-		txtInsiraValor = new JTextField();
-		txtInsiraValor.setText("Insira Valor");
-		txtInsiraValor.setColumns(10);
 
 		JLabel lblEmpilhar = new JLabel("Empilhar");
 		lblEmpilhar.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -121,69 +116,90 @@ public class TelaPilha extends JFrame {
 		});
 
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup().addGap(113)
-										.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-												.addComponent(lblPilhaVazia)
-												.addComponent(
-														btnDesempilhar, GroupLayout.PREFERRED_SIZE, 128,
-														GroupLayout.PREFERRED_SIZE)))
-								.addGroup(gl_contentPane.createSequentialGroup().addGap(10).addGroup(gl_contentPane
-										.createParallelGroup(Alignment.LEADING)
-										.addGroup(gl_contentPane.createSequentialGroup()
-												.addPreferredGap(ComponentPlacement.RELATED).addComponent(btnEmpilhar))
-										.addGroup(gl_contentPane.createSequentialGroup()
-												.addPreferredGap(ComponentPlacement.RELATED)
-												.addComponent(txtInsiraValor, GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-										.addGroup(gl_contentPane.createSequentialGroup().addGap(20).addComponent(
-												lblEmpilhar, GroupLayout.PREFERRED_SIZE, 54,
-												GroupLayout.PREFERRED_SIZE)))
-										.addPreferredGap(ComponentPlacement.RELATED, 125, Short.MAX_VALUE)
-										.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-												.addComponent(label).addComponent(btnExibitUltimoValor)
-												.addComponent(lblltimoValor, GroupLayout.PREFERRED_SIZE, 177,
-														GroupLayout.PREFERRED_SIZE))))
-						.addContainerGap(70, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup().addContainerGap().addComponent(btnVoltarMenuPrincipal)
-						.addPreferredGap(ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
-						.addComponent(btnSairDoPrograma).addGap(36))
-				.addGroup(gl_contentPane.createSequentialGroup().addGap(135).addComponent(lblTamanho)
-						.addContainerGap(198, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup().addGap(55)
-						.addComponent(lblPilhaIniciada, GroupLayout.PREFERRED_SIZE, 248, GroupLayout.PREFERRED_SIZE)
-						.addContainerGap(87, Short.MAX_VALUE)));
-		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(gl_contentPane
-				.createSequentialGroup()
-				.addComponent(lblPilhaIniciada, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE).addGap(37)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(113)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(lblPilhaVazia)
+								.addComponent(btnDesempilhar, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(30)
+									.addComponent(lblEmpilhar, GroupLayout.PREFERRED_SIZE, 54, GroupLayout.PREFERRED_SIZE))
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(21)
+									.addComponent(btnEmpilhar)))
+							.addPreferredGap(ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(label)
+								.addComponent(btnExibitUltimoValor)
+								.addComponent(lblltimoValor, GroupLayout.PREFERRED_SIZE, 177, GroupLayout.PREFERRED_SIZE))))
+					.addContainerGap(33, Short.MAX_VALUE))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(btnVoltarMenuPrincipal)
+					.addPreferredGap(ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+					.addComponent(btnSairDoPrograma)
+					.addGap(36))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(135)
+					.addComponent(lblTamanho)
+					.addContainerGap(198, Short.MAX_VALUE))
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(lblPilhaIniciada, GroupLayout.PREFERRED_SIZE, 358, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(22, Short.MAX_VALUE))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addComponent(lblPilhaIniciada, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+					.addGap(37)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(lblEmpilhar, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblltimoValor, GroupLayout.PREFERRED_SIZE, 21, GroupLayout.PREFERRED_SIZE))
-				.addPreferredGap(ComponentPlacement.RELATED)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(txtInsiraValor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
-								GroupLayout.PREFERRED_SIZE)
-						.addComponent(label, GroupLayout.PREFERRED_SIZE, 17, GroupLayout.PREFERRED_SIZE))
-				.addPreferredGap(ComponentPlacement.RELATED)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(btnEmpilhar)
-						.addComponent(btnExibitUltimoValor))
-				.addGap(17).addComponent(lblPilhaVazia).addPreferredGap(ComponentPlacement.UNRELATED)
-				.addComponent(btnDesempilhar, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE).addGap(8)
-				.addComponent(lblTamanho).addPreferredGap(ComponentPlacement.UNRELATED)
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE).addComponent(btnVoltarMenuPrincipal)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(label, GroupLayout.PREFERRED_SIZE, 17, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnExibitUltimoValor)
+						.addComponent(btnEmpilhar, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+					.addGap(17)
+					.addComponent(lblPilhaVazia)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addComponent(btnDesempilhar, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+					.addGap(8)
+					.addComponent(lblTamanho)
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnVoltarMenuPrincipal)
 						.addComponent(btnSairDoPrograma))
-				.addGap(19)));
+					.addGap(19))
+		);
 
 		contentPane.setLayout(gl_contentPane);
 
-		
-		
-		
+		Timer SimpleTimer = new Timer(2000, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				lblPilhaIniciada.setText("Ações da Pilha");
+
+			}
+		});
+		SimpleTimer.start();
+		if (lblPilhaIniciada.getText() == "Ações da Pilha") {
+			SimpleTimer.stop();
+		}
+
 		btnEmpilhar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				p.empilhar(txtInsiraValor.getText());
+				p.empilhar(JOptionPane.showInputDialog("Insira Valor"));
+				lblPilhaIniciada.setText("Empilhando...");
+				SimpleTimer.start();
 				lblTamanho.setText("Tamanho " + p.tamanho());
 				String vazia;
 				if (p.pilhaVazia()) {
@@ -197,6 +213,8 @@ public class TelaPilha extends JFrame {
 		btnDesempilhar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				p.desempilhar();
+				lblPilhaIniciada.setText("Desempilhando...");
+				SimpleTimer.start();
 				lblTamanho.setText("Tamanho " + p.tamanho());
 				String vazia;
 				if (p.pilhaVazia()) {
