@@ -5,9 +5,9 @@ public class Pilha {
 	public Object[] pilha;
 	public int posicaoPilha;
 
-	public Pilha() {
+	public Pilha(int x) {
 		this.posicaoPilha = -1;
-		this.pilha = new Object[10];
+		this.pilha = new Object[x];
 	}
 
 	public boolean pilhaVazia() {
@@ -24,10 +24,12 @@ public class Pilha {
 		return this.posicaoPilha + 1;
 	}
 
-	public void empilhar(Object valor) {
+	public boolean empilhar(Object valor) {
 		if (this.posicaoPilha < this.pilha.length - 1) {
 			this.pilha[++posicaoPilha] = valor;
-			
+			return true;
+		} else {
+			return false;
 		}
 	}
 
