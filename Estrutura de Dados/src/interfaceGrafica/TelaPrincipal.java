@@ -55,6 +55,7 @@ public class TelaPrincipal extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				TelaPilha tPilha = new TelaPilha();
 				tPilha.setVisible(true);
+				dispose();
 			}
 		});
 

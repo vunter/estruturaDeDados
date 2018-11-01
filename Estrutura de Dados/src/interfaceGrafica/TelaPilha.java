@@ -45,7 +45,7 @@ public class TelaPilha extends JFrame {
 	 * 
 	 * @throws InterruptedException
 	 */
-	
+
 	public TelaPilha() {
 		Pilha p = new Pilha(Integer.parseInt(JOptionPane.showInputDialog("Defina Tamanho da Pilha")));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -93,6 +93,8 @@ public class TelaPilha extends JFrame {
 		btnVoltarMenuPrincipal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
+				TelaPrincipal frame = new TelaPrincipal();
+				frame.setVisible(true);
 			}
 		});
 
